@@ -43,7 +43,7 @@
                                     int pgno = request.getParameter("pgno") == null?0:Integer.parseInt(request.getParameter("pgno"));
                                     start = pgno * count;
                                     Connection cn = DatabaseConnection.getConnection();
-                                    String query = "select * from users where role = 0 limit ?,?";
+                                    String query = "select * from users limit ?,?";
                                     PreparedStatement stmt = cn.prepareStatement(query);
                                     stmt.setInt(1, start);
                                     stmt.setInt(2, count);

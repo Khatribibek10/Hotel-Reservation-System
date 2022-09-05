@@ -7,7 +7,7 @@ import javax.mail.internet.*;
 public class EmailSender {
 
     private static String senderMail = "bibekkhatri709@gmail.com";
-    private static String senderPassword = "testpurpose@123";
+    private static String senderPassword = "yhlujcfmpcnamiee";
 
     public static boolean sendMail(String email, String subject, String messageToSend) {
         boolean status = false;

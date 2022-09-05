@@ -70,7 +70,7 @@
 
                 <h5 class="text-center text-light mt-2 p-3">Dear user your booking is failed due to unsuccessful payment, please try again.</h5>  
 
-                <button class="btn text-light mt-2" onclick="history.back()" style="background-color:#222D32; margin-left: 75px; border-radius: 30px; width:340px; "> Home </button>                                          
+                <button class="btn text-light mt-2" onclick="index.jsp" style="background-color:#222D32; margin-left: 75px; border-radius: 30px; width:340px; "> Home </button>                                          
             </div>
 
         </div>

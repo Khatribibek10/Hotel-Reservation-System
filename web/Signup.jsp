@@ -36,7 +36,7 @@
             <div class="row">
                 <div class="col">
                     <h2 class="text-center py-2 " style="color: white;">Registration Form</h2>
-                    <form id="register-form" class="form-horizontal" method="POST" action="SignupServlet" onsubmit="return formValidation();">
+                    <form id="register-form" class="form-horizontal" method="POST"  onsubmit="return formValidation();">
                         <br>
                         <fieldset>		
                             <div class="form-group m-3">
@@ -94,8 +94,9 @@
                                     </div>
                                 </div>
                             </div>
-                                    <div class="cols-sm-10">
-                                        <span>${error}</span>
+                                    <div class="col-lg-6 ">
+                                        <!-- Error Message -->
+                                        <span style="color: red;"><b>${error}</b></span>
                                     </div>
 
                             <div class="form-group m-3 ">
@@ -132,7 +133,11 @@
                                                         success: function (data, _, _) {
                                                             if (data.trim() === 'error') {
                                                                 swal("Error :(", "There was a problem signing up", "error");
-                                                            } else {
+                                                            }
+                                                            else if(data.trim() === 'emailerror'){
+                                                                swal("Error :(","Email Already exists","emailerror");
+                                                            }
+                                                            else {
                                                                 swal("Signup Successful", "success").then((_) => {
                                                                     window.location = "Login.jsp";
                                                                 });

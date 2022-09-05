@@ -101,6 +101,7 @@ function passValidate(){
             document.getElementById("signup_btn").disabled = true;
         }
     }
+   
     
     else{
         displayMsg("", "passMsg", "green");
@@ -118,6 +119,7 @@ function pass2Validate(){
             document.getElementById("signup_btn").disabled = true;
         }
     }
+    
     
     else{
         displayMsg("", "pass2Msg", "green");

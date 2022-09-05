@@ -2,10 +2,9 @@
 <html lang="en">
     <head>
         <%@include file="head.jsp" %>
-        <title>banner</title>\
+        <title>banner</title>
         <style>
             .maindiv{
-                /*background-color: red;*/
                 margin: 250px;
                 padding: 25px;
 
@@ -21,27 +20,27 @@
         </style>
     </head>
     <body class="">
-        
+
         <form action="availableRooms.jsp" method="post" onsubmit="return validateForm()" name="myForm">
             <div class=" row maindiv bg-secondary px-4">
 
                 <div class="col-4  ">
                     <div>
-                        <label>Check In Date</label>
+                        <label><b class="text-white">Check In Date</b></label>
                     </div>
                     <input type="date" class="form-control"  name="check_in" id="check_in"   required/>
                     <span id="checkin"></span>
                 </div>
                 <div class="col-4">
                     <div>
-                        <label>Check Out Date</label>
+                        <label><b class="text-white">Check Out Date</b></label>
                     </div>
                     <input type="date" class="form-control " name="check_out" id="check_out"  required />
                     <span id="checkout"></span>
                 </div>
 
                 <div class="col-2 mt-3 px-5 btn">
-                    <input type="submit" class="btn bg-primary" value="Search Availability" />
+                    <input type="submit"  class="btn bg-primary text-white" value="Search Availability" />
                 </div>
 
             </div>
@@ -51,14 +50,13 @@
 
             function validateForm() {
                 const currentDate = new Date();
-                var checkDate = currentDate.setDate(currentDate.getDate()  - 1 );
+                var checkDate = currentDate.setDate(currentDate.getDate() - 1);
                 var arrivalDate = new Date(document.getElementById('check_in').value);
                 var depatureDate = new Date(document.getElementById('check_out').value);
                 if (depatureDate <= arrivalDate) {
                     displayMsg("Your checkin and check out date is invalid", "checkout", "red");
                     return false;
-                } 
-                else if (arrivalDate < checkDate) {
+                } else if (arrivalDate < checkDate) {
                     displayMsg("Your checkin date is less than current date", "checkin", "red");
                     return false;
                 }
